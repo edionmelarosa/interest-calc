@@ -1,0 +1,33 @@
+<div ng-show="simpleController.tab === 'simple'">
+    <div class="box">
+        <h6 class="subtitle is-6">Simple Interest</h6>
+        <form name="form" name="simpleController.form" ng-submit="simpleController.submit(form)">
+            <div class="field">
+                <label class="label">Principal</label>
+                <div class="control">
+                    <input class="input" type="text" name="principal" placeholder="Principal" ng-model="simpleController.principal" required>
+                </div>
+            </div>
+        
+            <div class="field">
+                <label class="label">Time Period</label>
+                <div class="control">
+                    <input class="input" type="text" name="year" placeholder="Time Period in Years" ng-model="simpleController.year" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Rate of Interest</label>
+                <div class="control">
+                    <input class="input" type="text" name="rate" placeholder="Rate of Interest in %" ng-model="simpleController.rate" required>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <a class="button is-default" ng-click="simpleController.reset(form)">Reset</a>
+                    <button class="button is-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <result results="simpleController.results"></result>
+</div>

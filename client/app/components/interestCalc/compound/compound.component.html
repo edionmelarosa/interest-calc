@@ -1,0 +1,46 @@
+<div ng-show="compoundController.tab === 'compound'">
+    <div class="box">
+        <h6 class="subtitle is-6">Compound Interest</h6>
+        <form name="form" ng-submit="compoundController.submit(form)">
+            <div class="field">
+                <label class="label">Principal</label>
+                <div class="control">
+                    <input class="input" type="text" ng-model="compoundController.principal" placeholder="Principal" required>
+                </div>
+            </div>
+        
+            <div class="field">
+                <label class="label">Time Period</label>
+                <div class="control">
+                    <input class="input" ng-model="compoundController.year" type="text" placeholder="Time Period in Years" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Rate of Interest</label>
+                <div class="control">
+                    <input class="input" type="text" ng-model="compoundController.rate" placeholder="Rate of Interest in %" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Compound Frequency</label>
+                <div class="control">
+                    <span class="select">
+                        <select ng-model="compoundController.preq" required>
+                            <option selected value="12">Monthly</option>
+                            <option value="4">Quarterly</option>
+                            <option value="2">Haft-Yearly</option>
+                            <option value="1">Anually</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <a class="button is-default" ng-click="compoundController.reset(form)">Reset</a>
+                    <button class="button is-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <result results="compoundController.results"></result>
+</div>

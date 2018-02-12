@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="columns is-centered">
+        <div class="column is-mobile is-desktop is-three-fifths">
+            <h4 class="subtitle is-4">Interest Calculator</h4>
+            <div class="tabs">
+                <ul>
+                    <li class="is-active" ng-class="{'is-active' : interestCalcController.tab==='simple'}">
+                        <a ng-click="interestCalcController.changeTab('simple')">Simple</a>
+                        <li>
+                            <li ng-class="{'is-active' : interestCalcController.tab==='compound'}">
+                                <a ng-click="interestCalcController.changeTab('compound')">Compound</a>
+                            </li>
+                </ul>
+            </div>
+            <div class="form-container">
+                <simple tab="interestCalcController.tab"></simple>
+                <compound tab="interestCalcController.tab"></compound>
+
+            </div>
+        </div>
+    </div>
+</div>

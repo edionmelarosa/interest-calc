@@ -1,0 +1,25 @@
+<div ng-show="resultController.results.interests.length > 0">    
+    <hr>
+    <h6 class="subtitle is-6">Results</h6>
+    <div class="box">
+        <table class="table is-fullwidth is-hoverable">
+            <thead>
+                <tr>
+                    <td>Year</td>
+                    <td>Interest</td>
+                    <td>Total</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="result in resultController.results.interests">
+                    <td>{{result.year}}</td>
+                    <td>{{result.interest | currency : $ : 2}}</td>
+                    <td>{{result.total | currency : $ : 2}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <p>Total Interest: {{resultController.results.totals.totalInterest | currency : $ : 2}}</p>
+        <p>Total Amount: {{resultController.results.totals.totalAmount | currency : $ : 2}}</p>
+    </div>
+</div>
